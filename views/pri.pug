@@ -4,8 +4,9 @@ block content
 		.ui.grid
 			.row
 				.three.wide.column
-					h1 Bestie 
-					p Bestie is used to do experimental research to study interpersonal privacy. 
+					h1 Besties 
+					p Besties is an app for best friends! Besties documents and celebrates the most amazing, hilarious, and memorable moments between you and your best friend. 
+					p Linked to your Facebook account, you can store and share your photos more easily, just between the two of you, with your Facebook friends, or with the world, through Besties. Both you and your friend will manage this special photo gallery together, and tell a story about the two of you! 
 				.six.wide.column.ti
 					h1 Your Post
 					.ui.section.divider
@@ -15,11 +16,11 @@ block content
 					<br>
 					.centered.row
 						span Tagged in this photo 
-						a.ui.image.label.ig
+						a.ui.image.label
 							img(src='/profile_pictures/user-add-icon.png')
 							span(style='color: blue')=uname 
 						span (you)
-						a.ui.image.label
+						a.ui.image.label.ig
 							img.ig(src='/profile_pictures/user-add-icon.png')
 							span(style='color: blue')=fname
 					<br><br><br>
@@ -28,10 +29,22 @@ block content
 
 
 				.seven.wide.column
-					<h3>Preview</h3>
-
-					a.image(href='#')
-					img.ui.fluid.image(src='/profile_pictures/friendsph.jpeg')
+					h3 Preview
+					.ui.equal.width.center.aligned.padded.grid
+						.row
+							.column
+								a.image(href='#')
+								img.ui.fluid.image(src='/profile_pictures/besties1.jpeg')
+							.column
+								a.image(href='#')
+								img.ui.fluid.image(src='/profile_pictures/besties5.jpeg')
+						.row
+							.column
+								a.image(href='#')
+								img.ui.fluid.image(src='/profile_pictures/besties3.jpeg')
+							.column
+								a.image(href='#')
+								img.ui.fluid.image(src='/profile_pictures/besties4.jpeg')
 			.row
 				.column 	
 
@@ -40,7 +53,7 @@ block content
 		.header(style='font-size:30px;') Are you sure?
 		.content
 			case condis
-				when "aod" : p(style='font-size:20px;') 
+				when "asd" : p(style='font-size:20px;') 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -52,7 +65,7 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| ’s friends and yours can see your post, reshare this photo, and have access to your information.
-				when "aon" : p 
+				when "asn" : p 
 					| You have only posted 
 					span(style='color: blue') 2 
 					| photos to other people’s 
@@ -60,7 +73,7 @@ block content
 					| in the past 
 					span(style='color: blue') 12 
 					| months.
-				when "asd" : p 
+				when "aod" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -74,7 +87,7 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| ’s information.
-				when "asn" : p 
+				when "aon" : p 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
@@ -85,7 +98,7 @@ block content
 					| in the past 
 					span(style='color: blue') 12 
 					| months.
-				when "cod" : p 
+				when "csd" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -101,13 +114,13 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| will have edit rights to this photo, and the information you added to this photo, including caption, tagging, etc.
-				when "con" : p 
+				when "csn" : p 
 					| You have only tagged other people in your own photos 
 					span(style='color: blue') 2 
 					| times in the past 
 					span(style='color: blue') 12 
 					| months.
-				when "csd" : p 
+				when "cod" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -115,7 +128,7 @@ block content
 					| ’s 
 					span(style='color: blue') Timeline 
 					| and your own. Please note that Na cannot change your sharing of this photo, or the information you added to this photo, including caption, tagging, etc.
-				when "csn" : p 
+				when "con" : p 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
@@ -124,7 +137,7 @@ block content
 					| photos in the past 
 					span(style='color: blue') 12 
 					| months
-				when "eod" : p 
+				when "esd" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -136,12 +149,12 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| ’s friends outside your network can also see you tagged in this photo, view your profile, and/or reshare this photo.
-				when "eon" : p 
+				when "esn" : p 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| has #{number} friends outside of your network
-				when "esd" : p 
+				when "eod" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -157,7 +170,7 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| tagged in this photo, view her profile, and/or reshare this photo.
-				when "esn" : p 
+				when "eon" : p 
 					| You have #{number} friends outside of 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -167,41 +180,45 @@ block content
 		.actions
 			.ui.grid
 				.col
-					.ui.floating.fluid.labeled.icon.dropdown.button(style=' width: 250px;')
+					.ui.labeled.icon.pointing.dropdown.button(style=' width: 250px;')
+						input#choice(type="hidden" name="choice")
 						span.text  Edit Photo Privacy Setting
 						.menu
 							.p Who can see your post?
 							.header Your post will show up in Feed, on your profile and in search results.
 							.divider
-							.item
+							.item(data-value="public")
 								i.globe.icon 
 								| Public
 							.header
 								| Anyone on or off Facebook
 							.divider
-							.item
+							.item(data-value="friends")
 								i.users.icon 
 								| Friends(+)
 							.header
 								| Your friends on Facebook
 							.divider
-							.item
+							.item(data-value="specific_friends")
 								i.user.icon 
 								| Specific Friends
 							.header
 								| Only show to some friends
 							.divider
-							.item
+							.item(data-value="only_best")
 								i.lock.icon 
-								| Only me
+								| Only between the Besties
 				.col
-					.ui.cancel.button Cancel
-					.ui.blue.approve.button Post
+					.ui.cancel.button#no Cancel
+					.ui.blue.approve.button#yes Post
 
 
 	//add intro
 	script.
 		introJs().setOptions({
+			"skipLabel": "",
+			exitOnOverlayClick: false,
+
 			steps: [{
 				title: 'Welcome',
 				intro: 'welcome to Bestie!' 
@@ -212,7 +229,7 @@ block content
 				},
 				{
 				element: document.querySelector('.intext'),
-				intro: 'Add your comment here'
+				intro: 'Add your thoughts here'
 				},
 				{
 				element: document.querySelector('.ig'),
